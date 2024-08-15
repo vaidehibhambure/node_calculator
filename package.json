@@ -6,7 +6,9 @@
   "type": "module",
   "scripts": {
     "start": "node app.js",
-    "test": "./node_modules/.bin/jest"
+    "test": "./node_modules/.bin/jest",
+    "unit-test": "jest src/__tests__/unit.test.js",
+    "integration-test": "jest src/__tests__/integration.test.js"
   },
   "author": "Patrik Nygren",
   "license": "ISC",
