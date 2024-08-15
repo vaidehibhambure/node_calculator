@@ -8,14 +8,27 @@ pipeline {
         }
         stage('Unit Test') {
             steps {
-                sh 'npm run unit-test'
+                sh 'npm run test:unit'
             }
         }
         stage('Integration Test') {
             steps {
-                sh 'npm run integration-test'
+                sh 'npm run test:integration'
             }
         }
-        
+         post {
+        always {
+            // Clean up tasks
+            sh 'npm run stop || true' // Stop the application if it was started
+        }
+        success {
+            echo 'Pipeline completed successfully!'
+        }
+        failure {
+            echo 'Pipeline failed!'
+        }
+    }
+
+
     }
 }
