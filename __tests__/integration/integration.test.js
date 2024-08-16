@@ -8,8 +8,8 @@ test('should add two numbers', () => {
 });
 
 test('should subtract two numbers', () => {
-    const result = numberCruncher({ numOne: '5', numTwo: '3', operator: 'subtract' });
-    expect(result).toBe(2);
+    const result = numberCruncher({ numOne: '5', numTwo: '4', operator: 'subtract' });
+    expect(result).toBe(1);
 });
 
 test('should multiply two numbers', () => {
@@ -21,6 +21,6 @@ test('should divide two numbers', () => {
     expect(result).toBe(2);
 });
 test('should percentage two numbers', () => {
-    const result = numberCruncher({ numOne: '50', numTwo: '100', operator: 'percentage' });
-    expect(result).toBe(50);
+    const result = numberCruncher({ numOne: '40', numTwo: '100', operator: 'percentage' });
+    expect(result).toBe(40);
 });
