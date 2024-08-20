@@ -3,8 +3,8 @@ import numberCruncher from '../../src/modules/calculation/numberCruncher';
 //const { numberCruncher } = require('../modules/numberCruncher');
 
 test('should add two numbers', () => {
-    const result = numberCruncher({ numOne: '5', numTwo: '3', operator: 'add' });
-    expect(result).toBe(8);
+    const result = numberCruncher({ numOne: '5', numTwo: '4', operator: 'add' });
+    expect(result).toBe(9);
 });
 
 test('should subtract two numbers', () => {
